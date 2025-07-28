@@ -40,7 +40,19 @@ INSTALLED_APPS = [
     
     # my apps
     'store',
+    'accounts',
+    'cart',
+    'checkout',
+    'blog',
+    'core',
+    
+    
+     'pwa',
 ]
+
+
+AUTH_USER_MODEL = 'accounts.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
