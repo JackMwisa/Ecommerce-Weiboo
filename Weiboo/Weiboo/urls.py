@@ -70,3 +70,4 @@ urlpatterns = [
     path('variable-products', shopViews.variableProducts, name='variableProducts'),
 
 ]
+
