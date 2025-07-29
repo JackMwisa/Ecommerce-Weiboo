@@ -1,10 +1,6 @@
- 
-from cart.models import Cart
+from store.models import Category
 
-def cart_context(request):
-    if request.user.is_authenticated:
-        cart, created = Cart.objects.get_or_create(user=request.user)
-        return {'cart': cart}
-    return {'cart': None}
-
- 
+def categories_processor(request):
+    return {
+        'main_categories': Category.objects.filter(parent=None, is_active=True)
+    }

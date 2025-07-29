@@ -72,10 +72,11 @@ urlpatterns = [
     path('variable-products', shopViews.variableProducts, name='variableProducts'),
     
     
-    path('accounts/', include('accounts.urls')),
-    path('orders/', include('checkout.urls')),
-    path('cart/', include('cart.urls')),
-    path('products/', include('store.urls')),
+    path("accounts/", include("accounts.urls", namespace="accounts")),
+    path("store/", include("store.urls", namespace="store")),
+    path("cart/", include("cart.urls", namespace="cart")),
+    path("checkout/", include("checkout.urls", namespace="checkout")),
+    path("blog/", include("blog.urls", namespace="blog")),
 
 
 ]
